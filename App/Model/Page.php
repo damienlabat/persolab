@@ -8,7 +8,7 @@ class Page extends Base
 {
     protected $blocs=array();
 
-    public function __toString()
+    public function get()
     {
         $this->loadBlocs();
         $this->orderBlocs();
@@ -17,10 +17,10 @@ class Page extends Base
 
     private function loadBlocs()
     {
-        $dir= dirname(__DIR__) . '/blocs/';
+        $dir= ROOT . '/DATA/blocs/';
 
         foreach (scandir($dir) as $file) {
-            if (ereg('.php'.'$',$file))
+            if (ereg('.yaml'.'$',$file))
                 $this->blocs[]= Bloc::fromFile( $file );
         }
     }

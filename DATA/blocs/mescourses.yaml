@@ -1,0 +1,9 @@
+date: 2013-06-01
+title: Mes courses
+content: gestion de listes de courses (exercice AngularJS + Silex)
+tags:
+ - AngularJS
+ - Bootstrap
+img: mescourses.jpg
+demo: http://lab.damienlabat.fr/mescourses
+github: https://github.com/damienlabat/mescourses

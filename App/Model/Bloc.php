@@ -2,6 +2,8 @@
 
 namespace App\Model;
 
+use Symfony\Component\Yaml\Yaml;
+
 
 class Bloc extends Base
 {
@@ -16,24 +18,13 @@ class Bloc extends Base
     protected $github;
 
 
-    public static function fromFile($filename)
+    public static function fromFile($file)
     {
 
-      $class=$tags=$demo=$github=$img=null;
+      $newBloc= New Bloc( Yaml::parse(ROOT.'/DATA/blocs/'.$file) );
 
-      require dirname(__DIR__) . '/blocs/' . $filename;
-
-      $newBloc= New Bloc();
-
-      $newBloc->filename= 	$filename;
-      $newBloc->title = 	$title;
-      $newBloc->img = 		$img;
-      $newBloc->date = 		strtotime($date);
-      $newBloc->content = 	$content;
-      $newBloc->class = 	$class;
-      $newBloc->tags = 		$tags;
-      $newBloc->demo = 		$demo;
-      $newBloc->github = 	$github;
+      $newBloc->filename = $file;
+      $newBloc->date = strtotime($newBloc->date);
 
       return $newBloc;
     }

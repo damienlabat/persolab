@@ -1,9 +1,5 @@
 <?php
 
-function __autoload($class_name)
-{
-    include_once dirname(__DIR__) . '/' . str_replace('\\', '/', $class_name) . '.php';
-}
 
 function WordSum($word)
 {
@@ -16,6 +12,8 @@ function WordSum($word)
     return $cnt;
 }
 
+define('ROOT',dirname(__DIR__));
+$loader = require ROOT."/vendor/autoload.php";
 
 use App\Model\Page;
 
@@ -27,14 +25,15 @@ class app
 
     public function run()
     {
-       $this->html= new Page();
-       file_put_contents( dirname(__DIR__) . $this->page , $this->html);
+       $page= new Page();
+       $this->html= $page->get();
+       file_put_contents( ROOT . $this->page , $this->html);
     }
 
     public function showCode()
     {
         ob_start();
-        include dirname(__DIR__) . '/App/template/code.php';
+        include ROOT . '/App/template/code.php';
         $output = ob_get_clean();
         echo $output;
     }
