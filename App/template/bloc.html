@@ -1,0 +1,29 @@
+
+            <article class='bloc{% if bloc.class!=null %} {{bloc.class}}{% endif %}'><!-- {{bloc.filename}} -->
+                <header>
+                    <h2>{{bloc.title}}</h2>
+{% if bloc.tags!=null %}
+                    <ul>
+{% for tag in bloc.tags %}
+                        <li class='c{{tag|wordSum|modulo(10)}}'>{{tag}}</li>
+{% endfor %}
+                    </ul>
+{% endif %}
+                </header>
+{% if bloc.img!=null %}
+                <figure>
+                    <img src='./asset/img/{{bloc.img}}' alt=''/>
+                </figure>
+{% endif %}
+                <p class='content'>{{ bloc.content }}</p>
+                <footer>
+                    <ul>
+{% for linkname,link in bloc.links %}
+                        <li>
+                            <a class="{{linkname|stripAccents}}" href="{{link}}" title="{{link}}"/>{{linkname}}</a>
+                        </li>
+{% endfor %}
+                    </ul>
+                    <time datetime="{{ bloc.date|date('Y-m-d\TH:i:sP') }}<?= date(DATE_W3C,$bloc->date) ?>">{{ bloc.date|mois }} {{ bloc.date|date('Y') }}</time>
+                </footer>
+            </article>

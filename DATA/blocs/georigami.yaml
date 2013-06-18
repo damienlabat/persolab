@@ -8,5 +8,6 @@ tags:
  - jQuery
  - Bootstrap
 img: georigami.jpg
-demo: http://lab.damienlabat.fr/georigami
-github: https://github.com/damienlabat/georigami
+links:
+  démo: http://lab.damienlabat.fr/georigami
+  github: https://github.com/damienlabat/georigami

@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use App\Model\Bloc;
+use App\Utils\Twig;
 
 class Page extends Base
 {
@@ -36,11 +37,9 @@ class Page extends Base
 
     private function render( $template='main' )
     {
-        $page = $this;
-        ob_start();
-        include dirname(__DIR__) . '/template/' . $template . '.php';
-        $output = ob_get_clean();
-        return  $output;
 
+        return Twig::render($template.'.html', array(
+            'blocs' => $this->blocs
+            ) );
     }
 }

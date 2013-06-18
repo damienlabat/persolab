@@ -20,14 +20,11 @@
     <body>
         <div id='container'>
             <h1>Laboratoire</h1>
-
-<?php
-
-        foreach ($page->blocs as $bloc)
-            echo $bloc;
-
-?>
-
+{% for bloc in blocs %}
+     {{ include('bloc.html') }}
+{% else %}
+    aucun bloc trouvé :(
+{% endfor %}
         </div> <!-- /container -->
 
 

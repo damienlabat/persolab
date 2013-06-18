@@ -20,55 +20,81 @@
     <body>
         <div id='container'>
             <h1>Laboratoire</h1>
-
-
-            <!-- BLOC mescourses.yaml -->
-            <article class='bloc'>
+     
+            <article class='bloc'><!-- mescourses.yaml -->
                 <header>
                     <h2>Mes courses</h2>
                     <ul>
-			<li class="c3"><a href="#AngularJS">AngularJS</a></li>
-			<li class="c6"><a href="#Bootstrap">Bootstrap</a></li>
-		    </ul>
+                        <li class='c3'>AngularJS</li>
+                        <li class='c6'>Bootstrap</li>
+                    </ul>
                 </header>
                 <figure>
-                    <img src="./asset/img/mescourses.jpg" alt=""/>
+                    <img src='./asset/img/mescourses.jpg' alt=''/>
                 </figure>
                 <p class='content'>gestion de listes de courses (exercice AngularJS + Silex)</p>
                 <footer>
                     <ul>
-                        <li><a class="demo" href="http://lab.damienlabat.fr/mescourses" title="http://lab.damienlabat.fr/mescourses"/>démo</a></li>
-                        <li><a class="github" href="https://github.com/damienlabat/mescourses" title="http://lab.damienlabat.fr/mescourses"/>GitHub</a></li>
+                        <li>
+                            <a class="demo" href="http://lab.damienlabat.fr/mescourses" title="http://lab.damienlabat.fr/mescourses"/>démo</a>
+                        </li>
+                        <li>
+                            <a class="github" href="https://github.com/damienlabat/mescourses" title="https://github.com/damienlabat/mescourses"/>github</a>
+                        </li>
                     </ul>
-                    <time datetime="1970-01-01T01:00:00+01:00">Janvier 1970</time>
+                    <time datetime="2013-06-01CEST00:00:00+02:00<?= date(DATE_W3C,$bloc->date) ?>">Juin 2013</time>
                 </footer>
             </article>
-
-            <!-- BLOC georigami.yaml -->
-            <article class='bloc'>
+     
+            <article class='bloc'><!-- georigami.yaml -->
                 <header>
                     <h2>Géorigami</h2>
                     <ul>
-			<li class="c8"><a href="#svg">svg</a></li>
-			<li class="c1"><a href="#laravel">laravel</a></li>
-			<li class="c9"><a href="#webGl">webGl</a></li>
-			<li class="c6"><a href="#jQuery">jQuery</a></li>
-			<li class="c6"><a href="#Bootstrap">Bootstrap</a></li>
-		    </ul>
+                        <li class='c8'>svg</li>
+                        <li class='c1'>laravel</li>
+                        <li class='c9'>webGl</li>
+                        <li class='c6'>jQuery</li>
+                        <li class='c6'>Bootstrap</li>
+                    </ul>
                 </header>
                 <figure>
-                    <img src="./asset/img/georigami.jpg" alt=""/>
+                    <img src='./asset/img/georigami.jpg' alt=''/>
                 </figure>
-                <p class='content'>Fabriquez des montagnes en papier et plein d'autres choses à partir des données topographiques de google map.</p>
+                <p class='content'>Fabriquez des montagnes en papier et plein d&#039;autres choses à partir des données topographiques de google map.</p>
                 <footer>
                     <ul>
-                        <li><a class="demo" href="http://lab.damienlabat.fr/georigami" title="http://lab.damienlabat.fr/georigami"/>démo</a></li>
-                        <li><a class="github" href="https://github.com/damienlabat/georigami" title="http://lab.damienlabat.fr/georigami"/>GitHub</a></li>
+                        <li>
+                            <a class="demo" href="http://lab.damienlabat.fr/georigami" title="http://lab.damienlabat.fr/georigami"/>démo</a>
+                        </li>
+                        <li>
+                            <a class="github" href="https://github.com/damienlabat/georigami" title="https://github.com/damienlabat/georigami"/>github</a>
+                        </li>
                     </ul>
-                    <time datetime="1970-01-01T01:00:00+01:00">Janvier 1970</time>
+                    <time datetime="2013-04-01CEST00:00:00+02:00<?= date(DATE_W3C,$bloc->date) ?>">Avril 2013</time>
                 </footer>
             </article>
-
+     
+            <article class='bloc'><!-- melimelo.yaml -->
+                <header>
+                    <h2>MéliMélo</h2>
+                    <ul>
+                        <li class='c8'>svg</li>
+                        <li class='c4'>IpenityAPI</li>
+                    </ul>
+                </header>
+                <figure>
+                    <img src='./asset/img/melimelo.jpg' alt=''/>
+                </figure>
+                <p class='content'>Affichage des galeries Ipernity en SVG</p>
+                <footer>
+                    <ul>
+                        <li>
+                            <a class="demo" href="http://www.damienlabat.fr/melimelo" title="http://www.damienlabat.fr/melimelo"/>démo</a>
+                        </li>
+                    </ul>
+                    <time datetime="2009-02-01CET00:00:00+01:00<?= date(DATE_W3C,$bloc->date) ?>">Février 2009</time>
+                </footer>
+            </article>
         </div> <!-- /container -->
 
 

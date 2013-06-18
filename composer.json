@@ -1,6 +1,7 @@
 {
     "require": {
-        "symfony/yaml": "v2.3.0"
+        "symfony/yaml": "v2.3.0",
+        "twig/twig": "v1.13.1"
     },
     "autoload": { "psr-0": {"App": "."} }
 }

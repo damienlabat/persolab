@@ -5,5 +5,6 @@ tags:
  - AngularJS
  - Bootstrap
 img: mescourses.jpg
-demo: http://lab.damienlabat.fr/mescourses
-github: https://github.com/damienlabat/mescourses
+links:
+  démo: http://lab.damienlabat.fr/mescourses
+  github: https://github.com/damienlabat/mescourses
