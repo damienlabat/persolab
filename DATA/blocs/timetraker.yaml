@@ -1,0 +1,11 @@
+date: 2012-05-01
+title: CI_Timetraker
+content: Gestionnaire de temps et Todo list conçu avec CodeIgniter
+tags:
+ - CodeIgniter
+ - JQuery
+ - Bootstrap
+img: timetraker.jpg
+links:
+  démo: http://lab.damienlabat.fr/timetraker
+  github: https://github.com/damienlabat/CI_TimeTracker
